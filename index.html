@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js"></script>
+    <title>Cadastre-se Agora</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <main>
+        <div class="textopadrao">
+            <h1>
+                Dados de cadastro
+            </h1>
+            <p>
+                Atenção: todos os campos com o sinal (*) são obrigatórios.
+            </p>
+        </div>
+        <form action="" autocomplete="on">
+            <div">
+                <div class="dpessoais">
+                    <fieldset>
+                        <legend>DADOS PESSOAIS</legend>
+                        <div>
+                            <label for="nome">Nome Completo*:</label>
+                            <input type="text" id="nome" name="nome" title="Digite seu nome e sobrenome nesse campo."
+                                required placeholder="Ex.: João Roberto Gamma Top">
+                        </div>
+                        <div>
+                            <label for="cpf">CPF*:
+                                <input name="cpf1" type="text" pattern="[0-9]{3}" required placeholder="000"
+                                    title="Primeiro grupo de números do CPF"
+                                    aria-label="Primeiro grupo de números do CPF." size="3" minlength="3"
+                                    maxlength="3">.
+                                <input name="cpf2" type="text" required pattern="[0-9]{3}" placeholder="000"
+                                    title="Segundo grupo de números do CPF."
+                                    aria-label="Segundo grupo de números do CPF." size="3" minlength="3" maxlength="3">.
+                                <input name="cpf3" type="tel" pattern="[0-9]{3}" required placeholder="000"
+                                    title="Terceiro grupo de números do CPF."
+                                    aria-label="Terceiro grupo de números do CPF." size="3" minlength="3"
+                                    maxlength="3">-
+                                <input name="cpf4" type="text" pattern="[0-9]{2}" required placeholder="00"
+                                    title="Ultimos dois digitos do CPF." aria-label="Ultimos dois dígitos CPF." size="2"
+                                    minlength="2" maxlength="2">
+                        </div>
+
+                        <div>
+                            <label for="rg">RG:</label>
+                            <input type="text" name="rg" id="rg"
+                                title="Digite seu RG, assim como ele está escrito em seu documento."
+                                placeholder="Ex.: 001003404">
+                        </div>
+                        <div>
+                            <label for="sexo">Você se identifica como:</label>
+                            <select name="sexo" id="dpsexo">
+                                <option value="Gênero">Selecione seu Gênero</option>
+                                <option value="Gênero">Feminino</option>
+                                <option value="Gênero">Masculino</option>
+                                <option value="Gênero">Pessoa Trans</option>
+                                <option value="Gênero">Outros</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+                </div>
+                <div class="dendereco">
+                    <fieldset>
+                        <legend>DADOS DE ENDEREÇO</legend>
+                        <div>
+                            <label for="endereco">Endereço/Logradouro*:</label>
+                            <input type="text" name="endereco" id="endereco" required
+                                title="Rua, Avenida, Travessa etc." placeholder="Ex.: Rua Ágora">
+                        </div>
+                        <div>
+                            <label for="numero">Número*:</label>
+                            <input type="number" name="numero" id="numero" required placeholder="Ex.: 1212">
+                        </div>
+                        <div>
+                            <label for="Bairro">Bairro:</label>
+                            <input type="text" name="bairro" id="bairro" title="Digite o nome do bairro onde você mora"
+                                placeholder="Ex.: Jardim do Idealismo">
+                        </div>
+                        <div>
+                            <label for="cidade">Cidade:</label>
+                            <input type="text" name="cidade" id="cidade" title="Digite a cidade onde você mora"
+                                placeholder="Ex.: Campo Grande">
+                        </div>
+                        <div>
+                            <label for="estado">Estado:</label>
+                            <select id="estado" name="estado"
+                                title="Pressione a incial de seu estado para achar mais rápido"
+                                aria-label="Pressione a incial de seu estado para achar mais rápido"">
+                            <option value="">-Selecione-</option>
+                            <option value=" AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espirito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="cep">CEP:</label>
+                            <input name="cep1" type="tel" pattern="[0-9]{6}" required placeholder="00000"
+                                title="Primeiro grupo de números do CEP, contém 5 dígitos."
+                                aria-label="Primeiro grupo de números do CEP contém 5 dígitos" size="5" minlength="5"
+                                maxlength="5">-
+                            <input name="cep2" type="tel" required pattern="[0-9]{3}" placeholder="000"
+                                title="Segundo grupo de números do CEP, contém 3 dígitos."
+                                aria-label="Segundo grupo de números do CEP, contém 3 dígitos." size="3" minlength="3"
+                                maxlength="3">.
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="dcontato">
+                    <fieldset>
+                        <legend>DADOS DE CONTATO</legend>
+                        <div>
+                            <label for="contemail">E-mail:</label><input type="email" name="email" id="contemail"
+                                placeholder="Ex.: joao@gamma.com.br">
+                        </div>
+                        <div>
+                            <label>Telefone celular:</label>
+                            (<input name="tel1" type="tel" pattern="[0-9]{3}" required placeholder="DDD"
+                                title="Digite o DDD" aria-label="Digite o DDD" size="3" minlength="3" maxlength="3">) -
+                            <input name="tel2" type="tel" pattern="[0-9]{1}" placeholder="9"
+                                title="Digite o nono dígito, se ouver." aria-label="Digite o nono dígito, se ouver."
+                                size="1" minlength="1" maxlength="1">
+                            <input name="tel3" type="tel" pattern="[0-9]{4}" required placeholder="0000"
+                                title="Digite os 4 primeiros digitos do telefone."
+                                aria-label="Digite os 4 primeiros digitos" size="4" minlength="4" maxlength="4">-
+                            <input name="tel4" type="tel" pattern="[0-9]{4}" required placeholder="0000"
+                                title="Digite os 4 ultimos digitos do telefone." aria-label="Digit os 4 ultimos números"
+                                size="4" minlength="4" maxlength="4">
+                        </div>
+                        <div>
+                            <label>Telefone Fixo:</label>
+                            (<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="DDD" title="Digite o DDD"
+                                aria-label="Digite o DDD" size="3" minlength="3" maxlength="3">) -
+                            <input name="tel2" type="tel" pattern="[0-9]{4}" placeholder="0000"
+                                title="Digite os 4 primeiros digitos do telefone."
+                                aria-label="Digite os 4 primeiros digitos" size="4" minlength="4" maxlength="4">-
+                            <input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="0000"
+                                title="Digite os 4 ultimos digitos do telefone." aria-label="Digit os 4 ultimos números"
+                                size="4" minlength="4" maxlength="4">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="dautorezacao">
+                    <fieldset>
+                        <legend>AUTORIZAÇÕES</legend>
+                        <div>
+                            <input type="checkbox" name="autoemail" id="autoemail"><label for="autoemail">Quero receber
+                                as
+                                notícias
+                                por E-Mail!</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="autonoticias" id="autonoticias"><label for="autonoticias">Quero
+                                receber
+                                as
+                                novidades por SMS!</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="dconsentmento">
+                    <fieldset>
+                        <legend>CONSENTIMENTO</legend>
+                        <div>
+                            <input type="radio" name="radiotermos" value="termossim" id="confirmaDados_1"><label
+                                for="confirmaDados_1">Concordo
+                                com os termos de cadastro.</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="radiotermos" value="termosnao" id="confirmaDados_2"><label
+                                for="confirmaDados_2">Não
+                                concordo com os termos de cadastro.</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <input type="submit" name="enviar" id="botão_enviar" onclick="mensagem();" value="Enviar">
+                </div>
+                <p>
+                    Seus dados estão seguros conosco!
+                </p>
+
+        </form>
+        <hr>
+    </main>
+    <div>
+        <footer>
+            © Copyright 2021 Cássio Roberto Gomes Silva - todos os direitos resevados
+        </footer>
+    </div>
+
+</body>
+
+</html>

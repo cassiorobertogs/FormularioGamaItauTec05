@@ -1,0 +1,26 @@
+body {
+    width: 80%;
+    margin-left: 100pt;
+    margin-right: 100pt;
+    font: 14px verdana, arial, helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: left
+}
+
+footer {
+    font: 12px verdana, arial, helvetica, sans-serif;
+    text-align: center
+}
+
+input {
+    background-color: #B0E0E6;
+    font: 12px verdana, arial, helvetica, sans-serif;
+    color: #003399;
+    border: 2px solid #000099;
+}
